@@ -3,27 +3,33 @@ let lastScrollY = window.scrollY;
 const header = document.querySelector('header');
 let isNavbarHidden = false;
 
-// ===== TOGGLE HAMBURGER MENU =====
+// ===== HAMBURGER MENU - IMPROVED =====
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.getElementById('navLinks');
+    const headerElement = document.querySelector('header');
 
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '70px';
-                navLinks.style.right = '5%';
-                navLinks.style.background = 'rgba(10, 10, 10, 0.95)';
-                navLinks.style.padding = '2rem';
-                navLinks.style.borderRadius = '10px';
-                navLinks.style.border = '1px solid rgba(255,255,255,0.1)';
-                navLinks.style.zIndex = '99';
-                navLinks.style.gap = '1.5rem';
+    if (hamburger && navLinks) {
+        // Toggle menu
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu saat klik link di dalam
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close menu saat klik di luar (optional)
+        document.addEventListener('click', (e) => {
+            if (headerElement && !headerElement.contains(e.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
             }
         });
     }
