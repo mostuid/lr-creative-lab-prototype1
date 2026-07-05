@@ -1219,6 +1219,7 @@ header {
     font-weight: 300;
 }
 
+/* ===== WHY US FOOTER - FIX HOVER MIRIP LET'S TALK ===== */
 .why-us-footer {
     text-align: center;
     margin-top: 4rem;
@@ -1228,46 +1229,30 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
-    color: var(--gold-primary);
-    font-weight: 600;
-    font-size: 0.9rem;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: #0a0a0a;
+    font-weight: 700;
+    font-size: 0.85rem;
     padding: 0.9rem 2.5rem;
-    border: 1px solid var(--border-gold);
+    border: none;
     border-radius: 50px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     text-decoration: none;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
     position: relative;
     overflow: hidden;
 }
 
-.why-us-footer .btn-learn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    border-radius: 50px;
-}
-
+/* HOVER STATE - MIRIP LET'S TALK */
 .why-us-footer .btn-learn:hover {
-    color: #0a0a0a;
-    border-color: var(--gold-primary);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 40px rgba(212, 168, 75, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212, 168, 75, 0.35);
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
 }
 
-.why-us-footer .btn-learn:hover::before {
-    opacity: 1;
-}
-
-.why-us-footer .btn-learn span,
-.why-us-footer .btn-learn svg {
-    position: relative;
-    z-index: 1;
-}
-
+/* Icon SVG ikut berubah */
 .why-us-footer .btn-learn svg {
     transition: transform 0.3s ease;
 }
@@ -1826,7 +1811,7 @@ footer {
     }
     .why-us-footer .btn-learn {
         padding: 0.7rem 1.5rem;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         width: 100%;
         justify-content: center;
     }
