@@ -25,7 +25,7 @@
                 <span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="#services">ABOUT</a></li>
+                <li><a href="#about">ABOUT</a></li>
                 <li><a href="#services">SERVICES</a></li>
                 <li><a href="#portfolio">PORTFOLIO</a></li>
                 <li><a href="#clients-section">CLIENTS</a></li>
@@ -46,6 +46,12 @@
             <div class="hero-visual" id="card-container">
                 <div class="instagram-card" id="instagramCard">
                     <div class="card-glare" id="cardGlare"></div>
+
+                    <!-- Tapping indicator - top right -->
+                    <div class="tap-indicator tap-top-right">
+                        <img src="assets/click-hand-tap.svg" alt="tap">
+                    </div>
+
                     <div class="card-inner">
                         <!-- Header -->
                         <div class="card-header">
@@ -143,34 +149,49 @@
         </div>
     </section>
 
+    <!-- ===== SERVICES SECTION - FIXED ===== -->
     <section class="services" id="services">
-        <h2 class="section-title">OUR SERVICES</h2>
+        <div class="services-header">
+            <span class="section-label">✦ OUR SERVICES</span>
+            <h2 class="section-titles">LAYANAN <span>KAMI</span></h2>
+            <p class="section-desc">Solusi kreatif untuk membuat brand Anda viral di seluruh platform.</p>
+        </div>
+
         <div class="service-list">
+            <!-- Service 1 - Left -->
             <div class="service-item left">
                 <div class="icon">
                     <i class="fas fa-layer-group"></i>
                 </div>
                 <div class="text">
                     <h3>Social Media Management</h3>
-                    <p>Pengelolaan menyeluruh akun social media brand kamu — dari strategi konten, produksi video pendek, hingga community management. Kami yang handle, kamu yang nikmati hasilnya.</p>
+                    <p>Pengelolaan menyeluruh akun social media brand kamu — dari strategi konten, produksi video
+                        pendek, hingga community management. Kami yang handle, kamu yang nikmati hasilnya.</p>
                 </div>
             </div>
+
+            <!-- Service 2 - Right -->
             <div class="service-item right">
                 <div class="text">
                     <h3>Persona Account <span>Building</span></h3>
-                    <p>Kami ciptakan persona atau karakter yang menjadi wajah brand kamu. Bangun narasi, kembangkan cerita yang relevan, dan biarkan jutaan orang jatuh cinta dengan brand lewat karakter tersebut.</p>
+                    <p>Kami ciptakan persona atau karakter yang menjadi wajah brand kamu. Bangun narasi, kembangkan
+                        cerita yang relevan, dan biarkan jutaan orang jatuh cinta dengan brand lewat karakter tersebut.
+                    </p>
                 </div>
                 <div class="icon">
                     <i class="fas fa-user-tie"></i>
                 </div>
             </div>
-            <div class="service-item left" style="margin-left: 450px;">
+
+            <!-- Service 3 - Left (tanpa margin-left inline) -->
+            <div class="service-item left">
                 <div class="icon">
                     <i class="fas fa-users"></i>
                 </div>
                 <div class="text">
                     <h3>Campaign UGC <span>(User Generated Content)</span></h3>
-                    <p>Kami produksi 100+ video UGC yang terasa organik dan dipercaya audiens. Distribusi masif <br> ke banyak akun dalam 14–30 hari — brand kamu ada di mana-mana di FYP mereka.</p>
+                    <p>Kami produksi 100+ video UGC yang terasa organik dan dipercaya audiens. Distribusi masif ke
+                        banyak akun dalam 14–30 hari — brand kamu ada di mana-mana di FYP mereka.</p>
                 </div>
             </div>
         </div>
@@ -248,7 +269,11 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-        <h2 class="section-titles"><span>OUR BEST</span> <br>CONTENT OF THE MONTH</h2>
+        <div class="portfolio-header">
+            <span class="section-label">✦ OUR BEST PORTFOLIO</span>
+            <h2 class="section-titles">KONTEN <span>TERBAIK KAMI</span></h2>
+            <p class="section-desc">Kumpulan konten viral dengan views terbanyak yang pernah kami produksi.</p>
+        </div>
         <div class="portfolio-grid">
             <div class="card">
                 <img class="card-bg" src="assets/Porto-1.jpg" alt="Content">
@@ -343,8 +368,62 @@
 
         <div class="why-us-footer">
             <a href="#" class="btn-learn">
-                PELAJAR LAYANAN KAMI →
+                PELAJARI LAYANAN KAMI →
             </a>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about-section" id="about">
+        <div class="about-header">
+            <span class="section-label">✦ ABOUT US</span>
+            <h2>KENALI <span>KAMI LEBIH DEKAT</span></h2>
+            <p class="section-desc">
+                Tim kreatif di balik kesuksesan viral campaign brand-brand ternama Indonesia.
+            </p>
+        </div>
+
+        <div class="about-grid">
+            <!-- Container 1: CEO -->
+            <div class="about-card" style="user-select: none; cursor: pointer;">
+                <div class="about-image">
+                    <img src="assets/Louise.png" alt="CEO">
+                </div>
+                <div class="about-content">
+                    <h4>Louise Steven</h4>
+                    <h3>CEO & FOUNDER</h3>
+                    <p>Memulai karir di dunia kreatif sejak 2016 dan telah sukses membantu lebih dari 100 brand di
+                        seluruh Indonesia menciptakan konten viral. Bersama Flux Creative Universe, meraih MURI Award
+                        sebagai kreator konten digital viral terbanyak.</p>
+                </div>
+            </div>
+
+            <!-- Container 2: Co-CEO -->
+            <div class="about-card" style="user-select: none; cursor: pointer;">
+                <div class="about-image">
+                    <img src="assets/Clarissa.png" alt="Co-CEO">
+                </div>
+                <div class="about-content">
+                    <h4>Clarissa Eldora Yoe</h4>
+                    <h3>Co-CEO</h3>
+                    <p>Bergabung di industri kreatif sejak 2020 dan telah membantu lebih dari 50 brand — dari UMKM
+                        hingga brand besar — menciptakan konten yang berdampak nyata dan menggerakkan bisnis di social
+                        media.</p>
+                </div>
+            </div>
+
+            <!-- Container 3: Who Next -->
+            <div class="about-card" style="user-select: none; cursor: pointer;">
+                <div class="about-image">
+                    <img src="assets/Whos-Next.png" alt="Who Next" style="object-position: 0% 30%">
+                </div>
+                <div class="about-content">
+                    <h4>Who Next?</h4>
+                    <h3>Bisa jadi kamu</h3>
+                    <p>Kami selalu mencari talenta kreatif terbaik untuk bergabung. Siap menjadi bagian dari tim yang
+                        menciptakan virality?</p>
+                </div>
+            </div>
         </div>
     </section>
 
