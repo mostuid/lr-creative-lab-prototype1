@@ -113,43 +113,6 @@ h1, h2, h3, h4 {
     font-weight: 800;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 1.1rem;
-    letter-spacing: 4px;
-    color: var(--gold-primary);
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    position: relative;
-    margin-right: 900px;
-}
-.section-titles {
-    text-align: center;
-    font-size: 1.1rem;
-    letter-spacing: 4px;
-    color: var(--gold-primary);
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
-    margin: 12px auto 0;
-}
-.section-titles::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
-    margin: 12px auto 0;
-}
-
 /* ===== NAVBAR ===== */
 header {
     padding: 1rem 5%;
@@ -507,12 +470,6 @@ header {
     60%, 100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-@keyframes tapPulseBottom {
-    0%, 40% { opacity: 0; transform: translateY(0) scale(1); }
-    50% { opacity: 0; transform: translateY(4px) scale(0.9); }
-    60%, 100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
 .instagram-card:hover .tap-indicator {
     opacity: 0 !important;
     animation: none !important;
@@ -696,7 +653,59 @@ header {
     color: var(--gold-primary);
 }
 
-/* ===== SERVICES ===== */
+/* ============================================================ */
+/* ===== SERVICES SECTION - FOCUS PERBAIKAN ===== */
+/* ============================================================ */
+
+/* ===== SERVICES HEADER ===== */
+.services-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.services-header .section-label {
+    font-size: 0.75rem;
+    color: var(--gold-primary);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    display: block;
+    font-weight: 600;
+}
+
+.services-header .section-titles {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.2rem;
+    font-family: var(--font-heading);
+}
+
+.services-header .section-titles span {
+    color: var(--gold-primary);
+    position: relative;
+}
+
+.services-header .section-titles span::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+.services-header .section-desc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* ===== SERVICES LIST ===== */
 .services {
     padding: 5rem 5%;
     max-width: 1200px;
@@ -706,26 +715,33 @@ header {
 .service-list {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
 }
 
+/* ===== SERVICE ITEM ===== */
 .service-item {
     display: flex;
     align-items: center;
     gap: 2.5rem;
-    width: 80%;
+    width: 85%;
+    margin: 0 auto;
 }
 
+/* Kiri: icon di kiri, text di kanan */
 .service-item.left {
     align-self: flex-start;
+    margin-left: 0;
+    flex-direction: row;
 }
 
+/* Kanan: icon di kanan, text di kiri */
 .service-item.right {
     align-self: flex-end;
+    margin-right: 0;
     flex-direction: row-reverse;
-    text-align: left;
 }
 
+/* ===== ICON ===== */
 .service-item .icon {
     width: 70px;
     height: 70px;
@@ -756,6 +772,11 @@ header {
     transform: scale(1.1);
 }
 
+/* ===== TEXT ===== */
+.service-item .text {
+    flex: 1;
+}
+
 .service-item h3 {
     font-size: 1.8rem;
     font-style: italic;
@@ -776,6 +797,91 @@ header {
     font-size: 0.9rem;
     line-height: 1.6;
 }
+
+/* ============================================================ */
+/* ===== RESPONSIVE SERVICES - FOCUS PERBAIKAN ===== */
+/* ============================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .service-item {
+        width: 95%;
+        gap: 2rem;
+    }
+    
+    .service-item.left,
+    .service-item.right {
+        align-self: center;
+        margin: 0 auto;
+    }
+    
+    .service-item h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .service-item {
+        width: 100%;
+        flex-direction: column !important;
+        text-align: center;
+        gap: 1.5rem;
+        margin: 0 auto;
+    }
+    
+    .service-item.left,
+    .service-item.right {
+        align-self: center;
+        margin: 0 auto;
+    }
+    
+    .service-item .icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-item .icon i {
+        font-size: 24px;
+    }
+    
+    .service-item h3 {
+        font-size: 1.4rem;
+    }
+    
+    .service-item h3 span {
+        font-size: 0.9rem;
+    }
+    
+    .service-item p {
+        font-size: 0.85rem;
+        padding: 0 0.5rem;
+    }
+}
+
+/* Mobile kecil */
+@media (max-width: 480px) {
+    .service-item .icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .service-item .icon i {
+        font-size: 20px;
+    }
+    
+    .service-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .service-item p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================================ */
+/* ===== SECTION LAINNYA (tidak diubah) ===== */
+/* ============================================================ */
 
 /* ===== CLIENTS ===== */
 .clients {
@@ -854,10 +960,6 @@ header {
     margin: 0 auto;
 }
 
-.portfolio .section-title span {
-    color: var(--gold-primary);
-}
-
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -920,6 +1022,53 @@ header {
     font-size: 0.65rem;
     letter-spacing: 4px;
     color: var(--text-muted);
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.portfolio-header .section-label {
+    font-size: 0.75rem;
+    color: var(--gold-primary);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    display: block;
+    font-weight: 600;
+}
+
+.portfolio-header .section-titles {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.2rem;
+    font-family: var(--font-heading);
+}
+
+.portfolio-header .section-titles span {
+    color: var(--gold-primary);
+    position: relative;
+}
+
+.portfolio-header .section-titles span::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+.portfolio-header .section-desc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-weight: 300;
 }
 
 /* ===== WHY US SECTION ===== */
@@ -1183,6 +1332,142 @@ header {
     font-weight: 300;
 }
 
+/* ===== ABOUT SECTION ===== */
+.about-section {
+    padding: 5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-header .section-label {
+    font-size: 0.75rem;
+    color: var(--gold-primary);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    display: block;
+    font-weight: 600;
+}
+
+.about-header h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1.2rem;
+    font-family: var(--font-heading);
+}
+
+.about-header h2 span {
+    color: var(--gold-primary);
+    position: relative;
+}
+
+.about-header h2 span::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+.about-header .section-desc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-card {
+    background: var(--bg-card);
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-gold);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold-primary);
+    box-shadow: 0 20px 60px rgba(212, 168, 75, 0.08);
+}
+
+.about-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.1), rgba(212, 168, 75, 0.05));
+}
+
+.about-image-placeholder i {
+    font-size: 5rem;
+    color: var(--gold-primary);
+    opacity: 0.3;
+}
+
+.about-content {
+    padding: 2rem 1.5rem 2rem;
+}
+
+.about-content h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--gold-primary);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.about-content h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+    font-family: var(--font-heading);
+}
+
+.about-content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
 /* ===== FOOTER ===== */
 footer {
     padding: 5rem 5% 2rem;
@@ -1310,7 +1595,10 @@ footer {
     box-shadow: 0 8px 30px rgba(212, 168, 75, 0.3);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ============================================================ */
+/* ===== RESPONSIVE GLOBAL ===== */
+/* ============================================================ */
+
 @media (max-width: 1024px) {
     .hero-text h1 {
         font-size: 3.5rem;
@@ -1329,13 +1617,6 @@ footer {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .service-item,
-    .service-item.right {
-        width: 100%;
-    }
-    .service-item.left {
-        margin-left: 0 !important;
-    }
     .hero-content {
         margin-left: 0;
         flex-wrap: wrap;
@@ -1345,10 +1626,10 @@ footer {
         margin-left: 0;
         text-align: center;
     }
-    .section-title {
-        margin-right: 0;
-    }
     .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .tap-indicator {
@@ -1363,10 +1644,6 @@ footer {
     .tap-top-right {
         top: 12px;
         right: 12px;
-    }
-    .tap-bottom-left {
-        bottom: 12px;
-        left: 12px;
     }
 }
 
@@ -1432,22 +1709,6 @@ footer {
         max-width: 320px;
     }
 
-    .service-item,
-    .service-item.right {
-        flex-direction: column;
-        text-align: center;
-    }
-    .service-item.left,
-    .service-item.right {
-        align-self: center;
-    }
-    .service-item h3 {
-        font-size: 1.5rem;
-    }
-    .service-item.left {
-        margin-left: 0 !important;
-    }
-
     .clients-track-inner {
         gap: 2.5rem;
     }
@@ -1479,6 +1740,14 @@ footer {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .about-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .about-header h2 {
+        font-size: 2rem;
+    }
     .tap-indicator {
         width: 32px;
         height: 32px;
@@ -1491,10 +1760,6 @@ footer {
     .tap-top-right {
         top: 10px;
         right: 10px;
-    }
-    .tap-bottom-left {
-        bottom: 10px;
-        left: 10px;
     }
 }
 
@@ -1565,6 +1830,15 @@ footer {
         width: 100%;
         justify-content: center;
     }
+    .about-header h2 {
+        font-size: 1.6rem;
+    }
+    .about-content h4 {
+        font-size: 1.2rem;
+    }
+    .about-content p {
+        font-size: 0.85rem;
+    }
     .tap-indicator {
         width: 28px;
         height: 28px;
@@ -1577,9 +1851,5 @@ footer {
     .tap-top-right {
         top: 8px;
         right: 8px;
-    }
-    .tap-bottom-left {
-        bottom: 8px;
-        left: 8px;
     }
 }
