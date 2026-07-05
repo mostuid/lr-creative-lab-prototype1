@@ -99,8 +99,15 @@ body {
 }
 
 @keyframes glowPulse {
-    0% { opacity: 0.5; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1.1); }
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -110,7 +117,10 @@ a {
     transition: all 0.3s ease;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     font-weight: 800;
 }
@@ -304,8 +314,17 @@ header {
 }
 
 @keyframes pulse-dot {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.7); }
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+    }
 }
 
 .hero-text h1 {
@@ -347,7 +366,7 @@ header {
     display: inline-block;
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.8s;    
+    animation-delay: 0.8s;
 }
 
 .hero-text .span-4 {
@@ -412,6 +431,7 @@ header {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -439,7 +459,7 @@ header {
     border-radius: 24px;
     background: #1a1a1a;
     border: 1px solid var(--border-gold);
-    box-shadow: 
+    box-shadow:
         0 24px 60px -15px rgba(212, 168, 75, 0.15),
         inset 0 1px 0 rgba(212, 168, 75, 0.1);
     padding: 10px;
@@ -452,7 +472,7 @@ header {
 
 .instagram-card:hover {
     transform: scale(1.03);
-    box-shadow: 
+    box-shadow:
         0 30px 80px -15px rgba(212, 168, 75, 0.25),
         inset 0 1px 0 rgba(212, 168, 75, 0.2);
 }
@@ -463,7 +483,7 @@ header {
     z-index: 20;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
     padding: 6px;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -473,8 +493,8 @@ header {
 }
 
 .tap-indicator img {
-    width: 34px;
-    height: 34px;
+    width: 50px;
+    height: 50px;
     display: block;
     filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(10deg);
 }
@@ -486,9 +506,23 @@ header {
 }
 
 @keyframes tapPulseTop {
-    0%, 40% { opacity: 1; transform: translateY(0) scale(1); }
-    50% { opacity: 0.3; transform: translateY(-4px) scale(0.9); }
-    60%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+
+    0%,
+    40% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: translateY(-4px) scale(0.9);
+    }
+
+    60%,
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .instagram-card:hover .tap-indicator {
@@ -609,10 +643,25 @@ header {
 }
 
 @keyframes heartPop {
-    0% { opacity: 0; transform: scale(0); }
-    30% { opacity: 1; transform: scale(1.4); }
-    70% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(1); }
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
 }
 
 .card-actions {
@@ -873,13 +922,23 @@ header {
 }
 
 @keyframes scrollLeft {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 @keyframes scrollRight {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* ===== PORTFOLIO ===== */
@@ -1511,45 +1570,58 @@ footer {
     .hero-text h1 {
         font-size: 3.5rem;
     }
-    .hero-text .span-1, .hero-text .span-2 {
+
+    .hero-text .span-1,
+    .hero-text .span-2 {
         font-size: 3.5rem;
     }
-    .hero-text .span-3, .hero-text .span-4 {
+
+    .hero-text .span-3,
+    .hero-text .span-4 {
         font-size: 4.2rem;
     }
+
     .hero-description {
         font-size: 1rem;
     }
+
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .hero-content {
         margin-left: 0;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .hero-text {
         margin-left: 0;
         text-align: center;
     }
+
     .why-us-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .about-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .tap-indicator {
         width: 36px;
         height: 36px;
         padding: 5px;
     }
+
     .tap-indicator img {
-        width: 20px;
-        height: 20px;
+        width: 50px;
+        height: 50px;
     }
+
     .tap-top-right {
-        top: 12px;
-        right: 12px;
+        top: 430px;
+        right: -15px;
     }
 }
 
@@ -1569,7 +1641,7 @@ footer {
         z-index: 99;
         gap: 1.2rem;
         backdrop-filter: blur(20px);
-        box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
     }
 
     .nav-links.active {
@@ -1603,49 +1675,63 @@ footer {
         padding: 3rem 5%;
         min-height: auto;
     }
+
     .hero-content {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
     }
+
     .hero-text {
         text-align: center;
         padding-left: 0;
         padding-top: 1rem;
     }
+
     .hero-badge {
         font-size: 0.55rem;
         padding: 6px 14px;
         margin: 0 auto 1.5rem;
     }
+
     .hero-text h1 {
         font-size: 2.8rem;
     }
-    .hero-text .span-1, .hero-text .span-2 {
+
+    .hero-text .span-1,
+    .hero-text .span-2 {
         font-size: 3.5rem;
     }
-    .hero-text .span-3, .hero-text .span-4 {
+
+    .hero-text .span-3,
+    .hero-text .span-4 {
         font-size: 4.2rem;
     }
+
     .hero-description {
         font-size: 0.95rem;
         margin: 0 auto 2rem;
         max-width: 400px;
     }
+
     .hero-cta {
         justify-content: center;
     }
+
     .hero-cta .btn-primary {
         padding: 0.8rem 2rem;
         font-size: 0.75rem;
     }
+
     .hero-cta .btn-secondary {
         font-size: 0.75rem;
         padding: 0.8rem 1rem;
     }
+
     .hero-visual {
         min-height: 400px;
     }
+
     .instagram-card {
         max-width: 320px;
     }
@@ -1657,30 +1743,30 @@ footer {
         gap: 1.5rem;
         margin: 0 auto;
     }
-    
+
     .service-item.left,
     .service-item.right {
         align-self: center;
         margin: 0 auto;
     }
-    
+
     .service-item .icon {
         width: 60px;
         height: 60px;
     }
-    
+
     .service-item .icon i {
         font-size: 24px;
     }
-    
+
     .service-item h3 {
         font-size: 1.4rem;
     }
-    
+
     .service-item h3 span {
         font-size: 0.9rem;
     }
-    
+
     .service-item p {
         font-size: 0.85rem;
         padding: 0 0.5rem;
@@ -1689,10 +1775,12 @@ footer {
     .clients-track-inner {
         gap: 2.5rem;
     }
+
     .clients-track-inner img {
         height: 30px;
         max-width: 80px;
     }
+
     .clients-track-left .clients-track-inner,
     .clients-track-right .clients-track-inner {
         animation-duration: 20s;
@@ -1701,42 +1789,52 @@ footer {
     .footer-container {
         flex-direction: column;
     }
+
     .footer-links {
         flex-direction: column;
         gap: 2rem;
     }
+
     .why-us-grid {
         grid-template-columns: 1fr;
     }
+
     .why-us-header h2 {
         font-size: 2rem;
     }
+
     .our-clients-header h2 {
         font-size: 2.2rem;
     }
+
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .about-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
         margin: 0 auto;
     }
+
     .about-header h2 {
         font-size: 2rem;
     }
+
     .tap-indicator {
         width: 32px;
         height: 32px;
         padding: 4px;
     }
+
     .tap-indicator img {
-        width: 18px;
-        height: 18px;
+        width: 30px;
+        height: 30px;
     }
+
     .tap-top-right {
-        top: 10px;
-        right: 10px;
+        top: 475px;
+        right: -10px;
     }
 }
 
@@ -1744,28 +1842,37 @@ footer {
     .hero-text h1 {
         font-size: 2.2rem;
     }
-    .hero-text .span-1, .hero-text .span-2 {
+
+    .hero-text .span-1,
+    .hero-text .span-2 {
         font-size: 2.5rem;
     }
-    .hero-text .span-3, .hero-text .span-4 {
+
+    .hero-text .span-3,
+    .hero-text .span-4 {
         font-size: 2.8rem;
     }
+
     .hero-description {
         font-size: 0.85rem;
         padding: 0 1rem;
     }
+
     .hero-cta {
         flex-direction: column;
         width: 100%;
     }
+
     .hero-cta .btn-primary,
     .hero-cta .btn-secondary {
         width: 100%;
         text-align: center;
     }
+
     .hero-visual {
         min-height: 320px;
     }
+
     .instagram-card {
         max-width: 260px;
         padding: 8px;
@@ -1775,15 +1882,15 @@ footer {
         width: 50px;
         height: 50px;
     }
-    
+
     .service-item .icon i {
         font-size: 20px;
     }
-    
+
     .service-item h3 {
         font-size: 1.2rem;
     }
-    
+
     .service-item p {
         font-size: 0.8rem;
     }
@@ -1791,10 +1898,12 @@ footer {
     .clients-track-inner {
         gap: 1.5rem;
     }
+
     .clients-track-inner img {
         height: 24px;
         max-width: 60px;
     }
+
     .clients-track-left .clients-track-inner,
     .clients-track-right .clients-track-inner {
         animation-duration: 15s;
@@ -1803,45 +1912,56 @@ footer {
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
+
     .portfolio .card {
         max-width: 360px;
         margin: 0 auto;
     }
+
     .why-us-header h2 {
         font-size: 1.6rem;
     }
+
     .our-clients-header h2 {
         font-size: 1.8rem;
     }
+
     .why-us-card {
         padding: 2rem 1.5rem;
     }
+
     .why-us-footer .btn-learn {
         padding: 0.7rem 1.5rem;
         font-size: 0.75rem;
         width: 100%;
         justify-content: center;
     }
+
     .about-header h2 {
         font-size: 1.6rem;
     }
+
     .about-content h4 {
         font-size: 1.2rem;
     }
+
     .about-content p {
         font-size: 0.85rem;
     }
+
     .tap-indicator {
         width: 28px;
         height: 28px;
         padding: 3px;
     }
+
     .tap-indicator img {
-        width: 16px;
-        height: 16px;
+        width: 30px;
+        height: 30px;
     }
+
     .tap-top-right {
-        top: 8px;
-        right: 8px;
+        top: 385px;
+        right: -10px;
     }
 }
