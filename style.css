@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 /* ===== SCROLLBAR KUSTOM - TIPIS ===== */
 ::-webkit-scrollbar {
     width: 5px;
@@ -145,7 +147,6 @@ header {
 .logo img {
     width: auto;
     height: 60px;
-    fill: #d4a84b;
     filter: brightness(1) drop-shadow(0 0 20px rgba(212, 168, 75, 0.2));
 }
 
@@ -214,6 +215,7 @@ header {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    padding: 5px;
 }
 
 .hamburger span {
@@ -222,6 +224,24 @@ header {
     background: var(--gold-primary);
     border-radius: 2px;
     transition: all 0.3s ease;
+}
+
+/* ===== HAMBURGER ANIMATION ===== */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== MOBILE CTA - TERSEMBUNYI DI DESKTOP ===== */
+.mobile-cta {
+    display: none;
 }
 
 /* ===== HERO ===== */
@@ -296,6 +316,7 @@ header {
     font-weight: 800;
 }
 
+/* Fallback font untuk span-3 dan span-4 */
 .hero-text .span-1 {
     font-size: 4rem;
     color: var(--gold-primary);
@@ -318,20 +339,20 @@ header {
 }
 
 .hero-text .span-3 {
-    font-family: Blesh Forte;
-    font-size: 5.2rem;
+    font-family: 'Caveat', cursive;
+    font-size: 5.5rem;
     color: var(--gold-primary);
     position: relative;
     text-shadow: 0 0 40px rgba(212, 168, 75, 0.15);
     display: inline-block;
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards;
-    animation-delay: 0.8s;
+    animation-delay: 0.8s;    
 }
 
 .hero-text .span-4 {
-    font-family: Blesh Forte;
-    font-size: 5.2rem;
+    font-family: 'Caveat', cursive;
+    font-size: 5.5rem;
     color: var(--gold-primary);
     position: relative;
     text-shadow: 0 0 40px rgba(212, 168, 75, 0.15);
@@ -654,10 +675,9 @@ header {
 }
 
 /* ============================================================ */
-/* ===== SERVICES SECTION - FOCUS PERBAIKAN ===== */
+/* ===== SERVICES SECTION ===== */
 /* ============================================================ */
 
-/* ===== SERVICES HEADER ===== */
 .services-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -705,7 +725,6 @@ header {
     font-weight: 300;
 }
 
-/* ===== SERVICES LIST ===== */
 .services {
     padding: 5rem 5%;
     max-width: 1200px;
@@ -718,7 +737,6 @@ header {
     gap: 3rem;
 }
 
-/* ===== SERVICE ITEM ===== */
 .service-item {
     display: flex;
     align-items: center;
@@ -727,21 +745,18 @@ header {
     margin: 0 auto;
 }
 
-/* Kiri: icon di kiri, text di kanan */
 .service-item.left {
     align-self: flex-start;
     margin-left: 0;
     flex-direction: row;
 }
 
-/* Kanan: icon di kanan, text di kiri */
 .service-item.right {
     align-self: flex-end;
     margin-right: 0;
     flex-direction: row-reverse;
 }
 
-/* ===== ICON ===== */
 .service-item .icon {
     width: 70px;
     height: 70px;
@@ -772,7 +787,6 @@ header {
     transform: scale(1.1);
 }
 
-/* ===== TEXT ===== */
 .service-item .text {
     flex: 1;
 }
@@ -797,91 +811,6 @@ header {
     font-size: 0.9rem;
     line-height: 1.6;
 }
-
-/* ============================================================ */
-/* ===== RESPONSIVE SERVICES - FOCUS PERBAIKAN ===== */
-/* ============================================================ */
-
-/* Tablet */
-@media (max-width: 1024px) {
-    .service-item {
-        width: 95%;
-        gap: 2rem;
-    }
-    
-    .service-item.left,
-    .service-item.right {
-        align-self: center;
-        margin: 0 auto;
-    }
-    
-    .service-item h3 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .service-item {
-        width: 100%;
-        flex-direction: column !important;
-        text-align: center;
-        gap: 1.5rem;
-        margin: 0 auto;
-    }
-    
-    .service-item.left,
-    .service-item.right {
-        align-self: center;
-        margin: 0 auto;
-    }
-    
-    .service-item .icon {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .service-item .icon i {
-        font-size: 24px;
-    }
-    
-    .service-item h3 {
-        font-size: 1.4rem;
-    }
-    
-    .service-item h3 span {
-        font-size: 0.9rem;
-    }
-    
-    .service-item p {
-        font-size: 0.85rem;
-        padding: 0 0.5rem;
-    }
-}
-
-/* Mobile kecil */
-@media (max-width: 480px) {
-    .service-item .icon {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .service-item .icon i {
-        font-size: 20px;
-    }
-    
-    .service-item h3 {
-        font-size: 1.2rem;
-    }
-    
-    .service-item p {
-        font-size: 0.8rem;
-    }
-}
-
-/* ============================================================ */
-/* ===== SECTION LAINNYA (tidak diubah) ===== */
-/* ============================================================ */
 
 /* ===== CLIENTS ===== */
 .clients {
@@ -1219,7 +1148,7 @@ header {
     font-weight: 300;
 }
 
-/* ===== WHY US FOOTER - FIX HOVER MIRIP LET'S TALK ===== */
+/* ===== WHY US FOOTER ===== */
 .why-us-footer {
     text-align: center;
     margin-top: 4rem;
@@ -1245,16 +1174,10 @@ header {
     overflow: hidden;
 }
 
-/* HOVER STATE - MIRIP LET'S TALK */
 .why-us-footer .btn-learn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(212, 168, 75, 0.35);
     background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
-}
-
-/* Icon SVG ikut berubah */
-.why-us-footer .btn-learn svg {
-    transition: transform 0.3s ease;
 }
 
 .why-us-footer .btn-learn:hover svg {
@@ -1588,13 +1511,11 @@ footer {
     .hero-text h1 {
         font-size: 3.5rem;
     }
-    .hero-text .span-1,
-    .hero-text .span-2,
-    .hero-text .span-4 {
-        font-size: 3.8rem;
+    .hero-text .span-1, .hero-text .span-2 {
+        font-size: 3.5rem;
     }
-    .hero-text .span-3 {
-        font-size: 2.8rem;
+    .hero-text .span-3, .hero-text .span-4 {
+        font-size: 4.2rem;
     }
     .hero-description {
         font-size: 1rem;
@@ -1633,10 +1554,47 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-links,
-    .nav-actions .btn-primary {
+    .nav-links {
+        display: none !important;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top: 70px;
+        right: 5%;
+        left: 40%;
+        background: rgba(10, 10, 10, 0.98);
+        padding: 2rem;
+        border-radius: 12px;
+        border: 1px solid var(--border-gold);
+        z-index: 99;
+        gap: 1.2rem;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .nav-actions .desktop-cta {
         display: none;
     }
+
+    .mobile-cta {
+        display: block;
+        align-self: center;
+        margin-top: 0.5rem;
+    }
+
+    .mobile-cta .btn-primary {
+        color: #0a0a0a;
+        display: inline-block !important;
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -1663,13 +1621,11 @@ footer {
     .hero-text h1 {
         font-size: 2.8rem;
     }
-    .hero-text .span-1,
-    .hero-text .span-2,
-    .hero-text .span-4 {
-        font-size: 3rem;
+    .hero-text .span-1, .hero-text .span-2 {
+        font-size: 3.5rem;
     }
-    .hero-text .span-3 {
-        font-size: 2.2rem;
+    .hero-text .span-3, .hero-text .span-4 {
+        font-size: 4.2rem;
     }
     .hero-description {
         font-size: 0.95rem;
@@ -1692,6 +1648,42 @@ footer {
     }
     .instagram-card {
         max-width: 320px;
+    }
+
+    .service-item {
+        width: 100%;
+        flex-direction: column !important;
+        text-align: center;
+        gap: 1.5rem;
+        margin: 0 auto;
+    }
+    
+    .service-item.left,
+    .service-item.right {
+        align-self: center;
+        margin: 0 auto;
+    }
+    
+    .service-item .icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-item .icon i {
+        font-size: 24px;
+    }
+    
+    .service-item h3 {
+        font-size: 1.4rem;
+    }
+    
+    .service-item h3 span {
+        font-size: 0.9rem;
+    }
+    
+    .service-item p {
+        font-size: 0.85rem;
+        padding: 0 0.5rem;
     }
 
     .clients-track-inner {
@@ -1752,13 +1744,11 @@ footer {
     .hero-text h1 {
         font-size: 2.2rem;
     }
-    .hero-text .span-1,
-    .hero-text .span-2,
-    .hero-text .span-4 {
-        font-size: 2.4rem;
+    .hero-text .span-1, .hero-text .span-2 {
+        font-size: 2.5rem;
     }
-    .hero-text .span-3 {
-        font-size: 1.8rem;
+    .hero-text .span-3, .hero-text .span-4 {
+        font-size: 2.8rem;
     }
     .hero-description {
         font-size: 0.85rem;
@@ -1779,6 +1769,23 @@ footer {
     .instagram-card {
         max-width: 260px;
         padding: 8px;
+    }
+
+    .service-item .icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .service-item .icon i {
+        font-size: 20px;
+    }
+    
+    .service-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .service-item p {
+        font-size: 0.8rem;
     }
 
     .clients-track-inner {
