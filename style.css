@@ -101,21 +101,6 @@ body {
     100% { opacity: 1; transform: scale(1.1); }
 }
 
-/* ===== SCROLLBAR ===== */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: var(--bg-primary);
-}
-::-webkit-scrollbar-thumb {
-    background: var(--gold-primary);
-    border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--gold-light);
-}
-
 /* ===== TYPOGRAPHY ===== */
 a {
     text-decoration: none;
@@ -460,6 +445,7 @@ header {
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards;
     animation-delay: 0.6s;
+    position: relative;
 }
 
 .instagram-card {
@@ -487,6 +473,52 @@ header {
         inset 0 1px 0 rgba(212, 168, 75, 0.2);
 }
 
+/* ===== TAP INDICATORS ===== */
+.tap-indicator {
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    padding: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    width: 40px;
+    height: 40px;
+}
+
+.tap-indicator img {
+    width: 34px;
+    height: 34px;
+    display: block;
+    filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(10deg);
+}
+
+.tap-top-right {
+    top: 570px;
+    right: -15px;
+    animation: tapPulseTop 2.5s ease-in-out infinite;
+}
+
+@keyframes tapPulseTop {
+    0%, 40% { opacity: 1; transform: translateY(0) scale(1); }
+    50% { opacity: 0.3; transform: translateY(-4px) scale(0.9); }
+    60%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes tapPulseBottom {
+    0%, 40% { opacity: 0; transform: translateY(0) scale(1); }
+    50% { opacity: 0; transform: translateY(4px) scale(0.9); }
+    60%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.instagram-card:hover .tap-indicator {
+    opacity: 0 !important;
+    animation: none !important;
+}
+
+/* ===== CARD GLARE ===== */
 .card-glare {
     position: absolute;
     inset: 0;
@@ -1319,6 +1351,23 @@ footer {
     .why-us-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .tap-indicator {
+        width: 36px;
+        height: 36px;
+        padding: 5px;
+    }
+    .tap-indicator img {
+        width: 20px;
+        height: 20px;
+    }
+    .tap-top-right {
+        top: 12px;
+        right: 12px;
+    }
+    .tap-bottom-left {
+        bottom: 12px;
+        left: 12px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1430,6 +1479,23 @@ footer {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .tap-indicator {
+        width: 32px;
+        height: 32px;
+        padding: 4px;
+    }
+    .tap-indicator img {
+        width: 18px;
+        height: 18px;
+    }
+    .tap-top-right {
+        top: 10px;
+        right: 10px;
+    }
+    .tap-bottom-left {
+        bottom: 10px;
+        left: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1498,5 +1564,22 @@ footer {
         font-size: 0.8rem;
         width: 100%;
         justify-content: center;
+    }
+    .tap-indicator {
+        width: 28px;
+        height: 28px;
+        padding: 3px;
+    }
+    .tap-indicator img {
+        width: 16px;
+        height: 16px;
+    }
+    .tap-top-right {
+        top: 8px;
+        right: 8px;
+    }
+    .tap-bottom-left {
+        bottom: 8px;
+        left: 8px;
     }
 }
