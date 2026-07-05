@@ -227,14 +227,12 @@ window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
     
     if (currentScrollY > lastScrollY) {
-        // Scroll ke bawah → Sembunyikan navbar
         if (!isNavbarHidden && currentScrollY > 80) {
             header.style.transform = 'translateY(-100%)';
             header.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
             isNavbarHidden = true;
         }
     } else {
-        // Scroll ke atas → Munculkan navbar
         if (isNavbarHidden) {
             header.style.transform = 'translateY(0)';
             header.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
@@ -242,7 +240,6 @@ window.addEventListener('scroll', () => {
         }
     }
     
-    // Reset navbar saat di posisi paling atas
     if (currentScrollY === 0) {
         header.style.transform = 'translateY(0)';
         isNavbarHidden = false;
