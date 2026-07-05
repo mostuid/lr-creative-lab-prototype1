@@ -11,6 +11,10 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,18 +25,20 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="assets/LR-LOGO.png" alt="Xgency Logo">
+                <img src="assets/LR-LOGO.png" alt="LR Agency Logo">
                 <span></span>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#services">SERVICES</a></li>
                 <li><a href="#portfolio">PORTFOLIO</a></li>
                 <li><a href="#clients-section">CLIENTS</a></li>
                 <li><a href="#why-us">TEAM</a></li>
+                <!-- Tombol LET'S TALK di dalam menu mobile -->
+                <li class="mobile-cta"><a href="#" class="btn-primary">LET'S TALK!</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="#" class="btn-primary">LET'S TALK!</a>
+                <a href="#" class="btn-primary desktop-cta">LET'S TALK!</a>
                 <div class="hamburger" id="hamburger">
                     <span></span><span></span><span></span>
                 </div>
@@ -149,7 +155,7 @@
         </div>
     </section>
 
-    <!-- ===== SERVICES SECTION - FIXED ===== -->
+    <!-- ===== SERVICES SECTION ===== -->
     <section class="services" id="services">
         <div class="services-header">
             <span class="section-label">✦ OUR SERVICES</span>
@@ -183,7 +189,7 @@
                 </div>
             </div>
 
-            <!-- Service 3 - Left (tanpa margin-left inline) -->
+            <!-- Service 3 - Left -->
             <div class="service-item left">
                 <div class="icon">
                     <i class="fas fa-users"></i>
@@ -217,52 +223,52 @@
             <!-- Row 1: Bergerak ke KIRI -->
             <div class="clients-track clients-track-left">
                 <div class="clients-track-inner">
-                    <img src="/assets/logos/logo1.png" alt="Client 1">
-                    <img src="/assets/logos/logo2.png" alt="Client 2">
-                    <img src="/assets/logos/logo3.png" alt="Client 3">
-                    <img src="/assets/logos/logo4.png" alt="Client 4">
-                    <img src="/assets/logos/logo5.png" alt="Client 5">
-                    <img src="/assets/logos/logo6.png" alt="Client 6">
-                    <img src="/assets/logos/logo7.png" alt="Client 7">
-                    <img src="/assets/logos/logo8.png" alt="Client 8">
-                    <img src="/assets/logos/logo9.png" alt="Client 9">
-                    <img src="/assets/logos/logo10.png" alt="Client 10">
-                    <img src="/assets/logos/logo1.png" alt="Client 1">
-                    <img src="/assets/logos/logo2.png" alt="Client 2">
-                    <img src="/assets/logos/logo3.png" alt="Client 3">
-                    <img src="/assets/logos/logo4.png" alt="Client 4">
-                    <img src="/assets/logos/logo5.png" alt="Client 5">
-                    <img src="/assets/logos/logo6.png" alt="Client 6">
-                    <img src="/assets/logos/logo7.png" alt="Client 7">
-                    <img src="/assets/logos/logo8.png" alt="Client 8">
-                    <img src="/assets/logos/logo9.png" alt="Client 9">
-                    <img src="/assets/logos/logo10.png" alt="Client 10">
+                    <img src="assets/logos/logo1.png" alt="Client 1">
+                    <img src="assets/logos/logo2.png" alt="Client 2">
+                    <img src="assets/logos/logo3.png" alt="Client 3">
+                    <img src="assets/logos/logo4.png" alt="Client 4">
+                    <img src="assets/logos/logo5.png" alt="Client 5">
+                    <img src="assets/logos/logo6.png" alt="Client 6">
+                    <img src="assets/logos/logo7.png" alt="Client 7">
+                    <img src="assets/logos/logo8.png" alt="Client 8">
+                    <img src="assets/logos/logo9.png" alt="Client 9">
+                    <img src="assets/logos/logo10.png" alt="Client 10">
+                    <img src="assets/logos/logo1.png" alt="Client 1">
+                    <img src="assets/logos/logo2.png" alt="Client 2">
+                    <img src="assets/logos/logo3.png" alt="Client 3">
+                    <img src="assets/logos/logo4.png" alt="Client 4">
+                    <img src="assets/logos/logo5.png" alt="Client 5">
+                    <img src="assets/logos/logo6.png" alt="Client 6">
+                    <img src="assets/logos/logo7.png" alt="Client 7">
+                    <img src="assets/logos/logo8.png" alt="Client 8">
+                    <img src="assets/logos/logo9.png" alt="Client 9">
+                    <img src="assets/logos/logo10.png" alt="Client 10">
                 </div>
             </div>
 
             <!-- Row 2: Bergerak ke KANAN -->
             <div class="clients-track clients-track-right">
                 <div class="clients-track-inner" style="transform: translateX(-50%);">
-                    <img src="/assets/logos/logo11.png" alt="Client 11">
-                    <img src="/assets/logos/logo12.png" alt="Client 12">
-                    <img src="/assets/logos/logo13.png" alt="Client 13">
-                    <img src="/assets/logos/logo14.png" alt="Client 14">
-                    <img src="/assets/logos/logo15.png" alt="Client 15">
-                    <img src="/assets/logos/logo16.png" alt="Client 16">
-                    <img src="/assets/logos/logo17.png" alt="Client 17">
-                    <img src="/assets/logos/logo18.png" alt="Client 18">
-                    <img src="/assets/logos/logo19.png" alt="Client 19">
-                    <img src="/assets/logos/logo20.png" alt="Client 20">
-                    <img src="/assets/logos/logo11.png" alt="Client 11">
-                    <img src="/assets/logos/logo12.png" alt="Client 12">
-                    <img src="/assets/logos/logo13.png" alt="Client 13">
-                    <img src="/assets/logos/logo14.png" alt="Client 14">
-                    <img src="/assets/logos/logo15.png" alt="Client 15">
-                    <img src="/assets/logos/logo16.png" alt="Client 16">
-                    <img src="/assets/logos/logo17.png" alt="Client 17">
-                    <img src="/assets/logos/logo18.png" alt="Client 18">
-                    <img src="/assets/logos/logo19.png" alt="Client 19">
-                    <img src="/assets/logos/logo20.png" alt="Client 20">
+                    <img src="assets/logos/logo11.png" alt="Client 11">
+                    <img src="assets/logos/logo12.png" alt="Client 12">
+                    <img src="assets/logos/logo13.png" alt="Client 13">
+                    <img src="assets/logos/logo14.png" alt="Client 14">
+                    <img src="assets/logos/logo15.png" alt="Client 15">
+                    <img src="assets/logos/logo16.png" alt="Client 16">
+                    <img src="assets/logos/logo17.png" alt="Client 17">
+                    <img src="assets/logos/logo18.png" alt="Client 18">
+                    <img src="assets/logos/logo19.png" alt="Client 19">
+                    <img src="assets/logos/logo20.png" alt="Client 20">
+                    <img src="assets/logos/logo11.png" alt="Client 11">
+                    <img src="assets/logos/logo12.png" alt="Client 12">
+                    <img src="assets/logos/logo13.png" alt="Client 13">
+                    <img src="assets/logos/logo14.png" alt="Client 14">
+                    <img src="assets/logos/logo15.png" alt="Client 15">
+                    <img src="assets/logos/logo16.png" alt="Client 16">
+                    <img src="assets/logos/logo17.png" alt="Client 17">
+                    <img src="assets/logos/logo18.png" alt="Client 18">
+                    <img src="assets/logos/logo19.png" alt="Client 19">
+                    <img src="assets/logos/logo20.png" alt="Client 20">
                 </div>
             </div>
         </div>
@@ -431,7 +437,7 @@
         <div class="footer-container">
             <div class="footer-brand">
                 <div class="logo">
-                    <img src="assets/LR-LOGO.png" alt="Xgency Logo">
+                    <img src="assets/LR-LOGO.png" alt="LR Agency Logo">
                     <span></span>
                 </div>
                 <p class="tagline">BUILT FOR REAL RESULTS.</p>
